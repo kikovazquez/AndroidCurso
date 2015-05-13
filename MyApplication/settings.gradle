@@ -1,0 +1,1 @@
+include ':app', ':calculadora', ':intents', ':terremotos', ':a0tmp'

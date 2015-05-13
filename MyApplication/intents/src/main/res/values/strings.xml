@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Intents</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main_activity2">MainActivity2Activity</string>
+    <string name="act2">Actividad 2</string>
+    <string name="act1">Actividad 1</string>
+    <string name="action_acercade">Acerca De...</string>
+    <string name="casitres">casi tres</string>
+    <string name="casi2">casi dos</string>
+</resources>

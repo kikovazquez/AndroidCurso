@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Terremotos</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="help">Ayuda</string>
+    <string name="aboutit">Acerca de ...</string>
+    <string name="title_activity_menu_settings">MenuSettings</string>
+</resources>
