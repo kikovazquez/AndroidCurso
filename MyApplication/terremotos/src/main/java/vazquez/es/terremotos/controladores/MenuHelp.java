@@ -1,23 +1,24 @@
-package vazquez.es.terremotos;
+package vazquez.es.terremotos.controladores;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import vazquez.es.terremotos.R;
 
-public class MenuSettings extends ActionBarActivity {
+public class MenuHelp extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu_settings);
+        setContentView(R.layout.activity_menu_help);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_menu_settings, menu);
+        getMenuInflater().inflate(R.menu.menu_menu_help, menu);
         return true;
     }
 

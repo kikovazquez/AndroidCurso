@@ -6,4 +6,13 @@
     <string name="help">Ayuda</string>
     <string name="aboutit">Acerca de ...</string>
     <string name="title_activity_menu_settings">MenuSettings</string>
+    <string name="find">Buscar</string>
+    <string name="magnitud">Magnitud:</string>
+    <string name="fecha">Fecha:</string>
+    <string name="urlfeed">Url del Feed:</string>
+    <string name="velocidadrefresco">Velocidad Refresco:</string>
+    <string name="title_activity_lista_terremotos">ListaTerremotos</string>
+    <string name="title_activity_detalle_terremotos">DetalleTerremotos</string>
+    <string name="title_activity_menu_help">MenuHelp</string>
+    <string name="ayuda">Esta aplicacion es fantastica</string>
 </resources>

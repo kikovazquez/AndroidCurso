@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="magnitudterremoto">
+        <item>mayor que 1</item>
+        <item>mayor que 2</item>
+        <item>mayor que 3</item>
+        <item>mayor que 4</item>
+        <item>mayor que 5</item>
+        <item>mayor que 6</item>
+        <item>mayor que 7</item>
+    </string-array>
+
+</resources>

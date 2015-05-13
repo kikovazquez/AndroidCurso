@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/calculadora" />
             <option value="$PROJECT_DIR$/intents" />
             <option value="$PROJECT_DIR$/terremotos" />
+            <option value="$PROJECT_DIR$/viewadapters" />
           </set>
         </option>
       </GradleProjectSettings>
