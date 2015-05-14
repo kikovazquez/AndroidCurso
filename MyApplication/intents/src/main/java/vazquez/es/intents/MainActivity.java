@@ -2,20 +2,19 @@ package vazquez.es.intents;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-
-import java.io.Serializable;
 
 
 public class MainActivity extends ActionBarActivity {
 
-
+// vemos si funcioa ... hhh bbb
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
     }
 
