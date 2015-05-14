@@ -59,7 +59,7 @@ public class ConectorAdaptador extends BaseAdapter {
 
         TextView nombre = (TextView) convertView.findViewById(R.id.uno);
         TextView desc   = (TextView) convertView.findViewById(R.id.dos);
-        Button   boton = (Button) convertView.findViewById(R.id.button);
+        Button   boton = (Button) convertView.findViewById(R.id.boton);
 
             nombre.setText(datos.getUno());
             desc.setText(datos.getDos());

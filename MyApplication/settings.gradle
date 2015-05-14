@@ -1,1 +1,1 @@
-include ':app', ':calculadora', ':intents', ':terremotos', ':a0tmp', ':viewadapters'
+include ':app', ':calculadora', ':intents', ':terremotos', ':a0tmp', ':viewadapters', ':menucontextual'
