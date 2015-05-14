@@ -15,4 +15,5 @@
     <string name="title_activity_detalle_terremotos">DetalleTerremotos</string>
     <string name="title_activity_menu_help">MenuHelp</string>
     <string name="ayuda">Esta aplicacion es fantastica</string>
+    <string name="title_activity_pruebas_xml">PruebasXML</string>
 </resources>

@@ -33,6 +33,10 @@
             android:name=".controladores.MenuHelp"
             android:label="@string/title_activity_menu_help" >
         </activity>
+        <activity
+            android:name=".utils.PruebasXML"
+            android:label="@string/title_activity_pruebas_xml" >
+        </activity>
     </application>
 
 </manifest>
