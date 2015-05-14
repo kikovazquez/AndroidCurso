@@ -13,12 +13,12 @@ import java.util.List;
 public class ConectorAdaptador extends BaseAdapter {
     private Context context;
     private int layout;
-    private List<registro> coleccion;
+    private List<Registro> coleccion;
 
     public ConectorAdaptador() {
     }
 
-    public ConectorAdaptador(Context context, int layout, List<registro> coleccion) {
+    public ConectorAdaptador(Context context, int layout, List<Registro> coleccion) {
         this.context = context;
         this.layout = layout;
         this.coleccion = coleccion;

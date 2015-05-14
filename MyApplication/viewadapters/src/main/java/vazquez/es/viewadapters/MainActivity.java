@@ -40,7 +40,7 @@ public class MainActivity extends ActionBarActivity {
         */
 
         ConectorAdaptador adaptador =  null;
-        adaptador = new ConectorAdaptador();
+        adaptador = new ConectorAdaptador(this,R.layout.);
         prueba.setAdapter(adaptador);
 
 
