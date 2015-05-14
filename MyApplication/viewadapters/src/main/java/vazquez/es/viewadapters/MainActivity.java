@@ -13,6 +13,9 @@ import android.widget.BaseAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
+import java.util.LinkedList;
+import java.util.List;
+
 
 public class MainActivity extends ActionBarActivity {
     private ListView prueba;
@@ -27,7 +30,9 @@ public class MainActivity extends ActionBarActivity {
     }
 
     private void inicializar() {
+
         prueba = (ListView) findViewById(R.id.listView);
+
 
         /*
         ListAdapter adaptador = null;
@@ -40,7 +45,16 @@ public class MainActivity extends ActionBarActivity {
         */
 
         ConectorAdaptador adaptador =  null;
-        adaptador = new ConectorAdaptador(this,R.layout.);
+        List<Registro> datos;
+
+        datos = new LinkedList<>();
+
+        for (int i = 0 ; i < 10 ; i++ ) {
+
+            datos.add( i , new Registro( i  +"" , i*2 +""));
+        }
+
+        adaptador = new ConectorAdaptador(this,R.layout.detalle_list_item,datos);
         prueba.setAdapter(adaptador);
 
 
