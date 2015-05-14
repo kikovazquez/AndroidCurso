@@ -17,6 +17,7 @@ import java.util.LinkedList;
 
 import vazquez.es.terremotos.R;
 import vazquez.es.terremotos.controladores.parametros.BuscaTerremoto;
+import vazquez.es.terremotos.utils.PruebasXML;
 import vazquez.es.terremotos.utils.spinners;
 
 
@@ -24,6 +25,7 @@ public class FiltroTerremotos extends ActionBarActivity implements View.OnClickL
     private Button buscar;
     private Date   fechaBucar;
     private Spinner magnitudBuscar;
+    private Button XML;
 
 
     @Override
@@ -37,6 +39,8 @@ public class FiltroTerremotos extends ActionBarActivity implements View.OnClickL
     private void Inicializar() {
         buscar = (Button) findViewById(R.id.buscar) ;
         buscar.setOnClickListener(this);
+        XML = (Button) findViewById(R.id.xmlButton);
+        XML.setOnClickListener(this);
         magnitudBuscar = (Spinner) findViewById(R.id.magnitudsp);
         LinkedList<spinners> magnitudes = new LinkedList<spinners>();
         //La poblamos con los ejemplos
@@ -104,7 +108,12 @@ public class FiltroTerremotos extends ActionBarActivity implements View.OnClickL
             Intencion.putExtra("parstd", parstd);
             startActivity(Intencion);
         }
+        if (view.equals(XML)){
 
+            Intent intencion = new Intent(this, PruebasXML.class);
+            startActivity(intencion);
+
+        }
 
     }
 
