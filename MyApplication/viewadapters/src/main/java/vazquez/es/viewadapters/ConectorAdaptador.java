@@ -54,10 +54,12 @@ public class ConectorAdaptador extends BaseAdapter {
         if (convertView == null) {
             // utilizamos el inflador del registro.
             LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            layoutInflater.inflate(layout, null);
+            convertView = layoutInflater.inflate(layout, null);
+
         }
 
             final Registro datos = (Registro) getItem(i);
+            final int fila = i;
 
         TextView nombre = (TextView) convertView.findViewById(R.id.uno);
         TextView desc   = (TextView) convertView.findViewById(R.id.dos);
@@ -69,8 +71,9 @@ public class ConectorAdaptador extends BaseAdapter {
             boton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    int x = 0;
-                    Toast.makeText(ConectorAdaptador.this.context, datos.getUno() + " registro-->  " + getItemId(x)  ,Toast.LENGTH_SHORT).show();
+                    int x = ConectorAdaptador.this.coleccion.size();
+
+                    Toast.makeText(ConectorAdaptador.this.context, datos.getUno() + " registro-->  " + fila + " de " + x  ,Toast.LENGTH_SHORT).show();
 
 
                 }

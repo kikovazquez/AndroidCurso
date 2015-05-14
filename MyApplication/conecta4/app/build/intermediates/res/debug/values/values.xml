@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/C:/Users/Kiko/AndroidStudioProjects/AndroidCurso/Conecta4/app/src/main/res/values/arrays.xml -->
+    <eat-comment/>
+    <string-array name="figureCodes">
+        <item>rojo</item>
+        <item>amarillo</item>
+        <item>verde</item>
+    </string-array>
+    <string-array name="figures">
+        <item>Rojo</item>
+        <item>Amarillo</item>
+        <item>Verde</item>
+    </string-array>
+    <!-- From: file:/C:/Users/Kiko/AndroidStudioProjects/AndroidCurso/Conecta4/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="acercaDe">Acerca de</string>
+    <string name="acercadeText">Conecta 4 es un juego de dos jugadores,
+        humano contra la maquina, solo puedes colocar la ficha en la parte mas baja de las 
+        columnas que este libre , gana el que conecta 4 en cualquier direccion</string>
+    <string name="app_name">Conecta4</string>
+    <string name="checBoxPrefSummary">Marque si desea escuchar música</string>
+    <string name="checBoxPrefTitle">Música de fondo</string>
+    <string name="conecta_4">Conecta 4</string>
+    <string name="descripcion">Descripcion</string>
+    <string name="editTextPrefSummary">Pulse para teclear el nombre del jugador</string>
+    <string name="editTextPrefTitle">Nombre del jugador</string>
+    <string name="fin_del_juego">Se acabo</string>
+    <string name="firstCategoryPrefTitle">Datos personales</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="listPrefDialogTitle">Elija la figura inicial</string>
+    <string name="listPrefSummary">Pulse para mostrar la lista</string>
+    <string name="listPrefTitle">Color de tus fichas</string>
+    <string name="mensaje_fin_del_juego">Quieres volver a intentarlo?</string>
+    <string name="preferencesText">Ajustes</string>
+    <string name="preferenciasText">Preferencias</string>
+    <string name="secondCategoryPrefTitle">Ajustes del juego</string>
+    <string name="title_activity_acerca_de">AcercaDe</string>
+    <string name="title_activity_initial">Initial</string>
+    <!-- From: file:/C:/Users/Kiko/AndroidStudioProjects/AndroidCurso/Conecta4/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    <style name="C4Button">
+     <item name="android:layout_width">0dp</item>
+     <item name="android:layout_height">match_parent</item>
+     <item name="android:background">@android:color/transparent</item>
+     <item name="android:src">@drawable/c4_button</item>
+	</style>
+</resources>
