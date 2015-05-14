@@ -1,32 +1,29 @@
 package vazquez.es.menucontextual;
 
+import android.app.Activity;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.LinkedList;
 import java.util.List;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
+    private ListView tareasLV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ListView tareasLV = (ListView)findViewById(R.id.tareasListView);
-
-        /*String[] datos = new String[] {"Correr", "Nadar", "Andar en Bici"};
-        ListAdapter adaptador = new ArrayAdapter<String>(
-                MainActivity.this,
-                android.R.layout.simple_list_item_1,
-                datos);*/
-
+         tareasLV = (ListView)findViewById(R.id.tareasListView);
 
         List<Tarea> datos = new LinkedList<>();
 
@@ -38,7 +35,8 @@ public class MainActivity extends ActionBarActivity {
 
         tareasLV.setAdapter(adaptador);
 
-        // reigistra el menu contextual......
+        // registra el menu contextual...
+
         registerForContextMenu(tareasLV);
 
 
@@ -47,15 +45,41 @@ public class MainActivity extends ActionBarActivity {
 
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+
         super.onCreateContextMenu(menu, v, menuInfo);
+
         if (v.getId() == R.id.tareasListView) {
 
+            getMenuInflater().inflate(R.menu.menu_main,menu);
+
+             int posicion = ((AdapterView.AdapterContextMenuInfo) menuInfo).position;
+             //   Tarea tarea = (Tarea) ((AdapterView) v).getAdapter().getItem(posicion);
+             Tarea tarea = (Tarea) tareasLV.getAdapter().getItem(posicion);
+            menu.setHeaderTitle(tarea.getNombre());
         }
     }
 
     @Override
     public boolean onContextItemSelected(MenuItem item) {
+
+        if (item.getItemId() == R.id.action_settings ) {
+            // hacemos lo que queramos.
+            // en esta variable esta ..... menu... se accede desde el item.
+            ContextMenu.ContextMenuInfo menuInfo = item.getMenuInfo();
+            int posicion = ((AdapterView.AdapterContextMenuInfo) menuInfo).position;
+            /*    -- esto no SE SI  esta bien .... getActionView .... resulta que si....
+            View v = item.getActionView();
+            Tarea tarea = (Tarea) ((AdapterView) v).getAdapter().getItem(posicion);
+            */
+            Tarea tarea = (Tarea) tareasLV.getAdapter().getItem(posicion);
+            Toast.makeText(MainActivity.this ,"asdf",Toast.LENGTH_SHORT).show();
+
+
+        }
+
         return super.onContextItemSelected(item);
+
+
     }
 
     @Override

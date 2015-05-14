@@ -67,8 +67,8 @@ public class TareasAdapter extends BaseAdapter {
 
         TextView txNombre = (TextView) convertView.findViewById(R.id.txNombre);
         TextView txDescripcion = (TextView) convertView.findViewById(R.id.txDescripcion);
-        Button button = (Button) convertView.findViewById(R.id.button);
-
+        /* Button button = (Button) convertView.findViewById(R.id.button); */
+        /*
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -79,7 +79,7 @@ public class TareasAdapter extends BaseAdapter {
                 ).show();
             }
         });
-
+        */
         txNombre.setText(item.getNombre());
         txDescripcion.setText(item.getDescripcion());
 

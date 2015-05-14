@@ -22,9 +22,11 @@ public class ConectorAdaptador extends BaseAdapter {
     private List<Registro> coleccion;
 
     public ConectorAdaptador() {
+        super();
     }
 
     public ConectorAdaptador(Context context, int layout, List<Registro> coleccion) {
+        super();
         this.context = context;
         this.layout = layout;
         this.coleccion = coleccion;

@@ -8,9 +8,11 @@ public class Registro {
     private String dos;
 
     public Registro() {
+        super();
     }
 
     public Registro(String uno, String dos) {
+        super();
         this.uno = uno;
         this.dos = dos;
     }
