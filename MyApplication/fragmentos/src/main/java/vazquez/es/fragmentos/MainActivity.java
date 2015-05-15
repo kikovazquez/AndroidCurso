@@ -81,16 +81,25 @@ public class MainActivity extends Activity implements View.OnClickListener {
             Tarea tarea = (Tarea) tareasLV.getAdapter().getItem(posicion);
             Toast.makeText(MainActivity.this, "asdf", Toast.LENGTH_SHORT).show();
 
-            // si soy una tablet --> refresco fragmentos.
+            // TODO si soy una tablet --> refresco fragmentos.
             //if ( )
 
-            ListadoTareasFragment flistado = (ListadoTareasFragment) getFragmentManager().findFragmentById(R.id.fragmentListado);
-            flistado.registerListViewOnClick(this);
-            flistado.retrieve(tarea);
+            DetalleTareasFragment fdetalle = (DetalleTareasFragment) getFragmentManager().findFragmentById(R.id.fragmentListado);
 
-            // si soy un smartphone
-            Intent intencion = new Intent(this,MainActivity2Activity.class);
-            // si soy una tablet...
+
+            fdetalle.retrieve(tarea);
+
+
+            if ( fdetalle == null) {
+                // si soy un smartphone
+                Intent intencion = new Intent(this, MainActivity2Activity.class);
+                startActivity(intencion);
+
+                // si soy una tablet...
+            }
+            else {
+                fdetalle.retrieve(tarea);
+            }
 
 
 
