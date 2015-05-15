@@ -93,6 +93,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
             if ( fdetalle == null) {
                 // si soy un smartphone
                 Intent intencion = new Intent(this, MainActivity2Activity.class);
+                intencion.putExtra("tarea", tarea);
+
                 startActivity(intencion);
 
                 // si soy una tablet...

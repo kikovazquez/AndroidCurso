@@ -33,6 +33,16 @@ public class DetalleTareasFragment extends Fragment {
         return respuesta;
     }
 
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        Tarea tarea = (Tarea) getActivity().getIntent().getExtras().getSerializable("tarea");
+        if (tarea != null) {
+
+            retrieve(tarea);
+        }
+    }
+
     public void retrieve(Tarea miTarea){
         TextView tx1 = (TextView) getActivity().findViewById(R.id.nombre);
         TextView tx2 = (TextView) getActivity().findViewById(R.id.descripcion);

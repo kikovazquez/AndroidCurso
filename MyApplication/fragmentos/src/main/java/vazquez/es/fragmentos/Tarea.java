@@ -1,11 +1,12 @@
 package vazquez.es.fragmentos;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by androidm on 14/05/2015.
  */
-public class Tarea {
+public class Tarea implements Serializable {
     private String nombre;
     private String descripcion;
     private int prioridad;
