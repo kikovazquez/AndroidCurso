@@ -1,5 +1,6 @@
 package vazquez.es.terremotos.controladores;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -18,7 +19,8 @@ public class MenuHelp extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_menu_help, menu);
+        getMenuInflater().inflate(R.menu.menu_filtro_terremotos, menu);
+
         return true;
     }
 
@@ -31,8 +33,22 @@ public class MenuHelp extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+
+            Intent intencion = new Intent(this, MenuSettings.class);
+            //startActivity(intencion);
+            startActivityForResult(intencion,1);
+
+
             return true;
         }
+        if (id == R.id.action_aboutit) {
+
+        }
+        if (id == R.id.action_help) {
+            Intent intencion = new Intent(this, MenuHelp.class);
+            startActivity(intencion);
+        }
+
 
         return super.onOptionsItemSelected(item);
     }

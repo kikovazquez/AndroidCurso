@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:weightSum="1"
     android:background="#ff4d2cff"
-    android:id="@+id/">
+    android:id="@+id/xx">
 
     <fragment
         android:layout_width="match_parent"

@@ -6,8 +6,13 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="vazquez.es.terremotos.controladores.DetalleTerremotos">
 
-    <TextView android:text="Detalle de los terremotos" android:layout_width="wrap_content"
+    <fragment
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/detalleterremotos" />
-
+        android:name="vazquez.es.terremotos.fragmentos.DetalleListadoFragmento"
+        android:id="@+id/fragmentListView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true" />
 </RelativeLayout>

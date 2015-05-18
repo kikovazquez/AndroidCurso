@@ -17,7 +17,24 @@ public class Terremoto {
     private Point georsspoint;
     private int georsselev;
     private String age;
-    private String magnitude;
+    private int magnitude;
+
+    public Terremoto() {
+    }
+
+    public Terremoto(int id, String title, int magnitude) {
+        this.id = id;
+        this.title = title;
+        this.magnitude = magnitude;
+    }
+
+    public int getMagnitude() {
+        return magnitude;
+    }
+
+    public void setMagnitude(int magnitude) {
+        this.magnitude = magnitude;
+    }
 
     public int getId() {
         return id;
@@ -83,11 +100,5 @@ public class Terremoto {
         this.age = age;
     }
 
-    public String getMagnitude() {
-        return magnitude;
-    }
 
-    public void setMagnitude(String magnitude) {
-        this.magnitude = magnitude;
-    }
 }

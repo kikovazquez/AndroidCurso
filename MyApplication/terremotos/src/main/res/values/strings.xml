@@ -16,4 +16,9 @@
     <string name="title_activity_menu_help">MenuHelp</string>
     <string name="ayuda">Esta aplicacion es fantastica</string>
     <string name="title_activity_pruebas_xml">PruebasXML</string>
+    <string name="magnitud_terremoto">Magnitud </string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

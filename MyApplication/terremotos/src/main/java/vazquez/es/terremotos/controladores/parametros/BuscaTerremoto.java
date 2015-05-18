@@ -10,6 +10,14 @@ public class BuscaTerremoto implements Serializable {
     private int magnitudTerremoto;
     private Date fechaABuscar;
 
+    public Date getFechaABuscar() {
+        return fechaABuscar;
+    }
+
+    public void setFechaABuscar(Date fechaABuscar) {
+        this.fechaABuscar = fechaABuscar;
+    }
+
     public BuscaTerremoto() {
     }
 

@@ -44,13 +44,13 @@ public class FiltroTerremotos extends ActionBarActivity implements View.OnClickL
         magnitudBuscar = (Spinner) findViewById(R.id.magnitudsp);
         LinkedList<spinners> magnitudes = new LinkedList<spinners>();
         //La poblamos con los ejemplos
-        magnitudes.add(new spinners(1, "Suavecito ... sobre uno"));
-        magnitudes.add(new spinners(2, "Poco .... algo se mueve"));
-        magnitudes.add(new spinners(3, "Regulin .... en movimiento"));
-        magnitudes.add(new spinners(4, "se mueve .... ya empieza a asustar"));
-        magnitudes.add(new spinners(5, "ojo ehhh .... tiembla"));
-        magnitudes.add(new spinners(6, "Madre mia .... esto acojona"));
-        magnitudes.add(new spinners(7, "a mas no poder .... agarrate"));
+        magnitudes.add(new spinners(1, getString(R.string.magnitud_terremoto)+ " 1" ));
+        magnitudes.add(new spinners(2, getString(R.string.magnitud_terremoto)+ " 2"));
+        magnitudes.add(new spinners(3, getString(R.string.magnitud_terremoto)+ " 3"));
+        magnitudes.add(new spinners(4, getString(R.string.magnitud_terremoto)+ " 4"));
+        magnitudes.add(new spinners(5, getString(R.string.magnitud_terremoto)+ " 5"));
+        magnitudes.add(new spinners(6, getString(R.string.magnitud_terremoto)+ " 6"));
+        magnitudes.add(new spinners(7, getString(R.string.magnitud_terremoto)+ " 7"));
 
         //Creamos el adaptador
         ArrayAdapter<spinners> spinner_adapter = new ArrayAdapter<spinners>(this, android.R.layout.simple_spinner_item, magnitudes);
@@ -103,10 +103,12 @@ public class FiltroTerremotos extends ActionBarActivity implements View.OnClickL
         if (view.equals(buscar)) {
             BuscaTerremoto parstd = null;
             parstd = new BuscaTerremoto();
-            /* TODO: hay que inicializar parstd con los valores de magnitud y fecha */
-            Intent Intencion = new Intent(this, ListaTerremotos.class);
-            Intencion.putExtra("parstd", parstd);
-            startActivity(Intencion);
+            parstd.setMagnitudTerremoto((int) magnitudBuscar.getSelectedItemId());
+            parstd.setFechaABuscar(fechaBucar);
+
+            Intent intencion = new Intent(this, ListaTerremotos.class);
+            intencion.putExtra("parstd", parstd);
+            startActivity(intencion);
         }
         if (view.equals(XML)){
 
