@@ -19,15 +19,6 @@ public class MiDialogoFragment extends DialogFragment {
     public MiDialogoFragment() {
         // Required empty public constructor
 
-
-
-    }
-
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
         // creamos la factoria .....
         builder = new AlertDialog.Builder(getActivity());
         builder.setMessage("Desea Continuar?");
@@ -43,6 +34,15 @@ public class MiDialogoFragment extends DialogFragment {
 
             }
         });
+
+    }
+
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+
 
 
 
