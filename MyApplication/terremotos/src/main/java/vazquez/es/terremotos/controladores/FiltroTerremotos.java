@@ -1,6 +1,7 @@
 package vazquez.es.terremotos.controladores;
 
 import android.app.Activity;
+import android.app.DialogFragment;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -10,20 +11,25 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.Serializable;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.LinkedList;
 
 import vazquez.es.terremotos.R;
 import vazquez.es.terremotos.controladores.parametros.BuscaTerremoto;
+import vazquez.es.terremotos.utils.MiDatePickerDialog;
 import vazquez.es.terremotos.utils.PruebasXML;
 import vazquez.es.terremotos.utils.spinners;
 
 
 public class FiltroTerremotos extends ActionBarActivity implements View.OnClickListener {
     private Button buscar;
-    private Date   fechaBucar;
+    private TextView fechaTxt;
+    private Date fechaBuscar;
     private Spinner magnitudBuscar;
     private Button XML;
 
@@ -39,6 +45,8 @@ public class FiltroTerremotos extends ActionBarActivity implements View.OnClickL
     private void Inicializar() {
         buscar = (Button) findViewById(R.id.buscar) ;
         buscar.setOnClickListener(this);
+        fechaTxt = (TextView) findViewById(R.id.fecha);
+        fechaTxt.setOnClickListener(this);
         XML = (Button) findViewById(R.id.xmlButton);
         XML.setOnClickListener(this);
         magnitudBuscar = (Spinner) findViewById(R.id.magnitudsp);
@@ -58,7 +66,21 @@ public class FiltroTerremotos extends ActionBarActivity implements View.OnClickL
         spinner_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         magnitudBuscar.setAdapter(spinner_adapter);
 
+
+        final Calendar calendar = Calendar.getInstance();
+        int anyo = calendar.get(Calendar.YEAR);
+        int mes =  calendar.get(Calendar.MONTH);
+        int dia = calendar.get(Calendar.DAY_OF_MONTH);
+        fechaTxt.setText(new StringBuilder()
+                .append(dia).append("/")
+                .append(mes + 1).append("/")
+                .append(anyo));
+
+
+
+
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -99,22 +121,28 @@ public class FiltroTerremotos extends ActionBarActivity implements View.OnClickL
     @Override
     public void onClick(View view) {
 
+        if (view.getId() == R.id.fecha) {
+            MiDatePickerDialog newFragment = new MiDatePickerDialog();
+            newFragment.show(getFragmentManager(), "datePicker");
+        }
+
+
+
         /* BOTON buscar abre el listado pasandole los parametros de busqueda*/
         if (view.equals(buscar)) {
+
             BuscaTerremoto parstd = null;
             parstd = new BuscaTerremoto();
             parstd.setMagnitudTerremoto((int) magnitudBuscar.getSelectedItemId());
-            parstd.setFechaABuscar(fechaBucar);
+            parstd.setFechaABuscar(fechaBuscar);
 
             Intent intencion = new Intent(this, ListaTerremotos.class);
             intencion.putExtra("parstd", parstd);
             startActivity(intencion);
         }
         if (view.equals(XML)){
-
             Intent intencion = new Intent(this, PruebasXML.class);
             startActivity(intencion);
-
         }
 
     }

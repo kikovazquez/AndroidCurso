@@ -1,25 +1,18 @@
-package vazquez.es.dialogos;
+package vazquez.es.sharedpreferences;
 
-import android.content.DialogInterface;
-import android.os.Bundle;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
-    private MiDialogoFragment md;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // un dialogo es una ventana modal .....para sacar y pedir informacion
-        md = new  MiDialogoFragment();
-
-
-
     }
 
     @Override
@@ -38,21 +31,8 @@ public class MainActivity extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-
-            md.setOnclickListenerSi(new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    Toast.makeText(MainActivity.this , "siempre positivo", Toast.LENGTH_SHORT).show();
-                }
-            });
-            md.setOnclickListenerNo(new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    Toast.makeText(MainActivity.this, "nunca +", Toast.LENGTH_SHORT).show();
-                }
-            });
-
-            md.show(getFragmentManager(),"MIDIALOGO");
+            Intent intencion = new Intent(this, ConfiguracionActivity.class);
+            startActivity(intencion);
 
             return true;
         }
