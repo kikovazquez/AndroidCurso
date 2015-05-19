@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/dialogos/dialogos.iml" filepath="$PROJECT_DIR$/dialogos/dialogos.iml" />
       <module fileurl="file://$PROJECT_DIR$/fragmentos/fragmentos.iml" filepath="$PROJECT_DIR$/fragmentos/fragmentos.iml" />
       <module fileurl="file://$PROJECT_DIR$/intents/intents.iml" filepath="$PROJECT_DIR$/intents/intents.iml" />
+      <module fileurl="file://$PROJECT_DIR$/internet/internet.iml" filepath="$PROJECT_DIR$/internet/internet.iml" />
       <module fileurl="file://$PROJECT_DIR$/menucontextual/menucontextual.iml" filepath="$PROJECT_DIR$/menucontextual/menucontextual.iml" />
       <module fileurl="file://$PROJECT_DIR$/sharedpreferences/sharedpreferences.iml" filepath="$PROJECT_DIR$/sharedpreferences/sharedpreferences.iml" />
       <module fileurl="file://$PROJECT_DIR$/terremotos/terremotos.iml" filepath="$PROJECT_DIR$/terremotos/terremotos.iml" />

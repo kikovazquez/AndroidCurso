@@ -1,18 +1,12 @@
-package vazquez.es.sharedpreferences;
+package vazquez.es.internet;
 
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
-
-import java.util.prefs.PreferenceChangeEvent;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,21 +30,7 @@ public class MainActivity extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            Intent intencion = new Intent(this, ConfiguracionActivity.class);
-            startActivity(intencion);
             return true;
-        }
-        else if ( id == R.id.leer_settings) {
-            SharedPreferences misPref = PreferenceManager.getDefaultSharedPreferences(this);
-
-            String frecuencia =  misPref.getString("frecuencias", "0");
-            String url = misPref.getString("url", "kiko");
-            String mensaje = "los valores son " + frecuencia + " y " +  url;
-
-            Toast.makeText(this,mensaje,Toast.LENGTH_SHORT).show();
-
-
-
         }
 
         return super.onOptionsItemSelected(item);

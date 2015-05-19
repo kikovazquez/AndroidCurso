@@ -1,4 +1,4 @@
-package vazquez.es.myapplication;
+package vazquez.es.internet;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
