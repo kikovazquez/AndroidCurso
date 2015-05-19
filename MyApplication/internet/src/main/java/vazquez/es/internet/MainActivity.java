@@ -1,9 +1,12 @@
 package vazquez.es.internet;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 
 
 public class MainActivity extends Activity {
@@ -12,6 +15,12 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ImageView imagen = (ImageView) findViewById(R.id.imageView);
+
+        DescargaFichero descargaFichero = new DescargaFichero(imagen,new ProgressDialog(this));
+        descargaFichero.execute("https://stocklogos.com/sites/default/files/ferrari-logo_0.jpg");
+
+
     }
 
     @Override
@@ -30,6 +39,8 @@ public class MainActivity extends Activity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+
+
             return true;
         }
 
