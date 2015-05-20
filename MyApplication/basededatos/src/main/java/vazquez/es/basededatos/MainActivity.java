@@ -1,12 +1,9 @@
-package vazquez.es.parsexml;
+package vazquez.es.basededatos;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -15,14 +12,6 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.atom
-        ListView lv = (ListView)findViewById(R.id.listView);
-        ArrayAdapter<Terremoto> arrayAdapter = new ArrayAdapter<Terremoto>(this, android.R.layout.simple_list_item_1 );
-        lv.setAdapter(arrayAdapter);
-        DescargarXML dxml = new DescargarXML(lv);
-        dxml.execute("http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.atom");
-
-
     }
 
     @Override
@@ -41,8 +30,6 @@ public class MainActivity extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-
-
             return true;
         }
 
