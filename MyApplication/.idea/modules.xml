@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/intents/intents.iml" filepath="$PROJECT_DIR$/intents/intents.iml" />
       <module fileurl="file://$PROJECT_DIR$/internet/internet.iml" filepath="$PROJECT_DIR$/internet/internet.iml" />
       <module fileurl="file://$PROJECT_DIR$/menucontextual/menucontextual.iml" filepath="$PROJECT_DIR$/menucontextual/menucontextual.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parsexml/parsexml.iml" filepath="$PROJECT_DIR$/parsexml/parsexml.iml" />
       <module fileurl="file://$PROJECT_DIR$/sharedpreferences/sharedpreferences.iml" filepath="$PROJECT_DIR$/sharedpreferences/sharedpreferences.iml" />
       <module fileurl="file://$PROJECT_DIR$/terremotos/terremotos.iml" filepath="$PROJECT_DIR$/terremotos/terremotos.iml" />
       <module fileurl="file://$PROJECT_DIR$/viewadapters/viewadapters.iml" filepath="$PROJECT_DIR$/viewadapters/viewadapters.iml" />
